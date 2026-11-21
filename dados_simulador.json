@@ -1,126 +1,42 @@
 {
-  "banca": 100.49,
+  "banca": 101.45,
   "pnl_total": 0.49,
-  "margin_ratio": 0.49,
+  "margin_ratio": 11.03,
   "posicoes_abertas": [
     {
-      "par": "BTC",
-      "lado": "LONG",
-      "alavancagem": 500,
-      "margem": 0.04,
-      "entrada": 58000.0,
-      "atual": 58210.0,
-      "roi_liq": 141.2,
-      "trava_roi": 105.9,
-      "status": "Surfando Pico +141% \u00b7 Stop em +106%",
-      "liq_dist": "> 90%"
-    },
-    {
-      "par": "ETH",
-      "lado": "LONG",
-      "alavancagem": 500,
-      "margem": 0.05,
-      "entrada": 3000.0,
-      "atual": 3008.5,
-      "roi_liq": 101.6,
-      "trava_roi": 76.2,
-      "status": "Surfando Pico +101% \u00b7 Stop em +76%",
-      "liq_dist": "> 90%"
-    },
-    {
-      "par": "SOL",
-      "lado": "LONG",
-      "alavancagem": 300,
-      "margem": 0.06,
-      "entrada": 180.0,
-      "atual": 180.8,
-      "roi_liq": 109.3,
-      "trava_roi": 82.0,
-      "status": "Surfando Pico +109% \u00b7 Stop em +82%",
-      "liq_dist": "> 90%"
-    },
-    {
-      "par": "SUI",
-      "lado": "LONG",
-      "alavancagem": 300,
-      "margem": 0.04,
-      "entrada": 3.2,
-      "atual": 3.22,
-      "roi_liq": 163.5,
-      "trava_roi": 122.6,
-      "status": "Surfando Pico +163% \u00b7 Stop em +122%",
-      "liq_dist": "> 90%"
-    },
-    {
-      "par": "BNB",
-      "lado": "LONG",
-      "alavancagem": 200,
-      "margem": 0.05,
-      "entrada": 600.0,
-      "atual": 602.8,
-      "roi_liq": 77.3,
-      "trava_roi": 58.0,
-      "status": "Surfando Pico +77% \u00b7 Stop em +58%",
-      "liq_dist": "> 90%"
-    },
-    {
-      "par": "LTC",
-      "lado": "LONG",
-      "alavancagem": 200,
-      "margem": 0.06,
-      "entrada": 90.0,
-      "atual": 90.35,
-      "roi_liq": 61.8,
-      "trava_roi": 46.3,
-      "status": "Surfando Pico +61% \u00b7 Stop em +46%",
-      "liq_dist": "> 90%"
-    },
-    {
-      "par": "ZEC",
-      "lado": "LONG",
-      "alavancagem": 150,
-      "margem": 0.04,
-      "entrada": 45.0,
-      "atual": 45.18,
-      "roi_liq": 48.0,
-      "trava_roi": 10.0,
-      "status": "Risco Zero Ativo (+10% Garantido)",
-      "liq_dist": "> 90%"
-    },
-    {
-      "par": "HYPE",
+      "par": "XAG",
       "lado": "SHORT",
-      "alavancagem": 100,
-      "margem": 0.05,
-      "entrada": 12.0,
-      "atual": 11.96,
-      "roi_liq": 25.3,
+      "alavancagem": 8,
+      "margem": 5.1,
+      "entrada": 41.02,
+      "atual": 41.10204,
+      "roi_liq": 10.0,
       "trava_roi": 10.0,
-      "status": "Risco Zero Ativo (+10% Garantido)",
+      "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
       "liq_dist": "> 90%"
     },
     {
-      "par": "GOLD",
-      "lado": "SHORT",
-      "alavancagem": 20,
-      "margem": 0.06,
-      "entrada": 2700.0,
-      "atual": 2697.5,
-      "roi_liq": 16.9,
+      "par": "SQQQ",
+      "lado": "LONG",
+      "alavancagem": 25,
+      "margem": 4.06,
+      "entrada": 54.46,
+      "atual": 54.56892,
+      "roi_liq": 10.0,
       "trava_roi": 10.0,
-      "status": "Risco Zero Ativo (+10% Garantido)",
+      "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
       "liq_dist": "> 90%"
     },
     {
-      "par": "KERNEL",
+      "par": "KORU",
       "lado": "SHORT",
-      "alavancagem": 20,
-      "margem": 0.04,
-      "entrada": 0.043,
-      "atual": 0.0428,
-      "roi_liq": 13.5,
+      "alavancagem": 50,
+      "margem": 2.03,
+      "entrada": 5.077,
+      "atual": 5.087154,
+      "roi_liq": 10.0,
       "trava_roi": 10.0,
-      "status": "Risco Zero Ativo (+10% Garantido)",
+      "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
       "liq_dist": "> 90%"
     }
   ],
@@ -168,15 +84,15 @@
       "motivo": "TRAILING STOP SURF EXECUTADO NO LUCRO",
       "pnl": "+0.045 USDT",
       "roi": "+105.9% L\u00edq",
-      "tempo": "11:43:53"
+      "tempo": "16:26:09"
     },
     {
       "par": "ETH",
       "motivo": "HEDGE FECHADO EM +13% ROI (Giro R\u00e1pido)",
       "pnl": "+0.007 USDT",
       "roi": "+13.2% L\u00edq",
-      "tempo": "11:43:53"
+      "tempo": "16:26:09"
     }
   ],
-  "atualizado_em": "21/11/2026 11:43:53"
+  "atualizado_em": "21/11/2026 16:26:09"
 }
