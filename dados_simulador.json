@@ -1,7 +1,7 @@
 {
-  "banca": 101.45,
+  "banca": 101.81,
   "pnl_total": 0.49,
-  "margin_ratio": 11.03,
+  "margin_ratio": 11.76,
   "posicoes_abertas": [
     {
       "par": "XAG",
@@ -28,12 +28,12 @@
       "liq_dist": "> 90%"
     },
     {
-      "par": "KORU",
+      "par": "ONE",
       "lado": "SHORT",
-      "alavancagem": 50,
-      "margem": 2.03,
-      "entrada": 5.077,
-      "atual": 5.087154,
+      "alavancagem": 20,
+      "margem": 2.81,
+      "entrada": 0.0009835,
+      "atual": 0.000985467,
       "roi_liq": 10.0,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
@@ -84,15 +84,15 @@
       "motivo": "TRAILING STOP SURF EXECUTADO NO LUCRO",
       "pnl": "+0.045 USDT",
       "roi": "+105.9% L\u00edq",
-      "tempo": "17:22:13"
+      "tempo": "20:21:09"
     },
     {
       "par": "ETH",
       "motivo": "HEDGE FECHADO EM +13% ROI (Giro R\u00e1pido)",
       "pnl": "+0.007 USDT",
       "roi": "+13.2% L\u00edq",
-      "tempo": "17:22:13"
+      "tempo": "20:21:09"
     }
   ],
-  "atualizado_em": "21/11/2026 17:22:13"
+  "atualizado_em": "21/11/2026 20:21:09"
 }
