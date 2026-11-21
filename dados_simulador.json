@@ -168,14 +168,15 @@
       "motivo": "TRAILING STOP SURF EXECUTADO NO LUCRO",
       "pnl": "+0.045 USDT",
       "roi": "+105.9% L\u00edq",
-      "tempo": "14:28:10"
+      "tempo": "11:43:53"
     },
     {
       "par": "ETH",
       "motivo": "HEDGE FECHADO EM +13% ROI (Giro R\u00e1pido)",
       "pnl": "+0.007 USDT",
       "roi": "+13.2% L\u00edq",
-      "tempo": "14:15:32"
+      "tempo": "11:43:53"
     }
-  ]
+  ],
+  "atualizado_em": "21/11/2026 11:43:53"
 }
