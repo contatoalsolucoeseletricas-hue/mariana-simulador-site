@@ -1,7 +1,7 @@
 {
-  "banca": 101.81,
+  "banca": 103.28,
   "pnl_total": 0.49,
-  "margin_ratio": 11.76,
+  "margin_ratio": 9.12,
   "posicoes_abertas": [
     {
       "par": "XAG",
@@ -22,19 +22,67 @@
       "margem": 4.06,
       "entrada": 54.46,
       "atual": 54.56892,
-      "roi_liq": 10.0,
+      "roi_liq": 32.4,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
       "liq_dist": "> 90%"
     },
     {
-      "par": "ONE",
+      "par": "KNC",
       "lado": "SHORT",
+      "alavancagem": 50,
+      "margem": 0.05,
+      "entrada": 0.0918,
+      "atual": 0.09198360000000001,
+      "roi_liq": 12.3,
+      "trava_roi": 10.0,
+      "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
+      "liq_dist": "> 90%"
+    },
+    {
+      "par": "KIMCHI",
+      "lado": "LONG",
       "alavancagem": 20,
-      "margem": 2.81,
-      "entrada": 0.0009835,
-      "atual": 0.000985467,
-      "roi_liq": 10.0,
+      "margem": 0.05,
+      "entrada": 0.001188,
+      "atual": 0.001190376,
+      "roi_liq": 27.0,
+      "trava_roi": 10.0,
+      "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
+      "liq_dist": "> 90%"
+    },
+    {
+      "par": "HOT",
+      "lado": "LONG",
+      "alavancagem": 20,
+      "margem": 0.05,
+      "entrada": 0.0003367,
+      "atual": 0.0003373734,
+      "roi_liq": 21.6,
+      "trava_roi": 10.0,
+      "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
+      "liq_dist": "> 90%"
+    },
+    {
+      "par": "BNT",
+      "lado": "LONG",
+      "alavancagem": 50,
+      "margem": 0.05,
+      "entrada": 0.2072,
+      "atual": 0.2076144,
+      "roi_liq": 22.5,
+      "trava_roi": 10.0,
+      "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
+      "liq_dist": "> 90%"
+    },
+    {
+      "par": "CLAUDIA",
+      "lado": "LONG",
+      "alavancagem": 20,
+      "margem": 0.05,
+      "entrada": 0.010335,
+      "atual": 0.01035567,
+      "roi_liq": 3.2,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
       "liq_dist": "> 90%"
@@ -84,15 +132,15 @@
       "motivo": "TRAILING STOP SURF EXECUTADO NO LUCRO",
       "pnl": "+0.045 USDT",
       "roi": "+105.9% L\u00edq",
-      "tempo": "20:21:09"
+      "tempo": "03:21:38"
     },
     {
       "par": "ETH",
       "motivo": "HEDGE FECHADO EM +13% ROI (Giro R\u00e1pido)",
       "pnl": "+0.007 USDT",
       "roi": "+13.2% L\u00edq",
-      "tempo": "20:21:09"
+      "tempo": "03:21:38"
     }
   ],
-  "atualizado_em": "21/11/2026 20:21:09"
+  "atualizado_em": "22/11/2026 03:21:38"
 }
