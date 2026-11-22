@@ -168,15 +168,127 @@
       "motivo": "TRAILING STOP SURF EXECUTADO NO LUCRO",
       "pnl": "+0.045 USDT",
       "roi": "+105.9% L\u00edq",
-      "tempo": "11:21:40"
+      "tempo": "13:25:49"
     },
     {
       "par": "ETH",
       "motivo": "HEDGE FECHADO EM +13% ROI (Giro R\u00e1pido)",
       "pnl": "+0.007 USDT",
       "roi": "+13.2% L\u00edq",
-      "tempo": "11:21:40"
+      "tempo": "13:25:49"
     }
   ],
-  "atualizado_em": "22/11/2026 11:21:40"
+  "telemetria": {
+    "ultima_atualizacao": "22/11/2026 12:26:05 BRT",
+    "timestamp": 1795361165,
+    "totais": {
+      "tokens_in": 11668000,
+      "tokens_out": 1558480,
+      "tokens_cache_hit": 8311350,
+      "taxa_cache_hit_pct": 71.2,
+      "tokens_poupados_camada0": 245000000,
+      "total_geral_processado": 13226480
+    },
+    "financeiro": {
+      "custo_real_gasto_usd": 0.0,
+      "custo_real_gasto_brl": 0.0,
+      "valor_bruto_oficial_sem_cache_usd": 58.35,
+      "valor_bruto_oficial_sem_cache_brl": 335.51,
+      "valor_com_prompt_cache_usd": 35.92,
+      "valor_com_prompt_cache_brl": 206.54,
+      "economia_total_usd": 58.35,
+      "economia_total_brl": 335.51,
+      "projecao_30_dias_bruto_usd": 1474.11,
+      "projecao_30_dias_bruto_brl": 8476.13,
+      "projecao_30_dias_economia_usd": 1474.11,
+      "projecao_30_dias_economia_brl": 8476.13
+    },
+    "janelas_cotas": {
+      "antigravity_claude": {
+        "nome": "\ud83d\udfe0 Antigravity / Claude (Camada 2/3)",
+        "descricao": "Agente Soberano, Orquestra\u00e7\u00e3o e Auditoria",
+        "janela_5h_uso_pct": 34.0,
+        "janela_5h_reqs": "18 / 50 reqs",
+        "janela_5h_reset": "13:33 BRT",
+        "janela_7d_uso_pct": 28.5,
+        "janela_7d_reset": "Domingo \u00e0s 23:59 BRT",
+        "status": "\ud83d\udfe2 Dispon\u00edvel (Cota Saud\u00e1vel)"
+      },
+      "gemini_ai_studio": {
+        "nome": "\ud83d\udd35 Google Gemini Free (Camada 1 \u2014 R$ 0)",
+        "descricao": "Pool de 50 modelos AI Studio / 15 RPM / 1.500 req/dia",
+        "uso_diario_pct": 21.4,
+        "reqs_hoje": "1296 reqs",
+        "reset": "Hoje \u00e0s 21:00 BRT (00:00 UTC)",
+        "status": "\ud83d\udfe2 100% Gratuito (Zero Tarifa)"
+      },
+      "openrouter_deepseek": {
+        "nome": "\ud83d\udfe3 OpenRouter :free & DeepSeek (Camada 1 \u2014 R$ 0)",
+        "descricao": "Fallback Autom\u00e1tico e Mensagens Matinais",
+        "uso_diario_pct": 14.8,
+        "reqs_hoje": "28 reqs",
+        "reset": "Hoje \u00e0s 21:00 BRT (00:00 UTC)",
+        "status": "\ud83d\udfe2 Ativo em Standby"
+      },
+      "pool_local_camada0": {
+        "nome": "\ud83d\udfe2 Pool Local / Camada 0 (Python/FFmpeg/Edge-TTS/Playwright \u2014 R$ 0)",
+        "descricao": "Scanner MEXC 1.178 pares, OCR local, Testes e C\u00e1lculos SMC",
+        "uso_pct": 100.0,
+        "volume_poupado": "245.0M tokens fora de LLMs",
+        "reset": "Sem Limite / Execu\u00e7\u00e3o Infinita",
+        "status": "\u26a1 Custo Zero Absoluto"
+      }
+    },
+    "comparativo_planos": [
+      {
+        "plano": "API Oficial Pay-As-You-Go (Bruto s/ Cache)",
+        "custo_periodo_usd": "$58.35",
+        "custo_periodo_brl": "R$ 335.51",
+        "custo_mensal_proj_usd": "$1474.11",
+        "custo_mensal_proj_brl": "R$ 8476.13",
+        "status": "\ud83d\udd34 Extremamente Caro (Tabela Cheia)"
+      },
+      {
+        "plano": "API Oficial Pay-As-You-Go (c/ Prompt Cache)",
+        "custo_periodo_usd": "$35.92",
+        "custo_periodo_brl": "R$ 206.54",
+        "custo_mensal_proj_usd": "$907.45",
+        "custo_mensal_proj_brl": "R$ 5217.85",
+        "status": "\ud83d\udfe1 -39.2% via Prompt Caching"
+      },
+      {
+        "plano": "Claude Pro Oficial ($20/m\u00eas)",
+        "custo_periodo_usd": "$60.00",
+        "custo_periodo_brl": "R$ 345.00",
+        "custo_mensal_proj_usd": "$120.00",
+        "custo_mensal_proj_brl": "R$ 690.00",
+        "status": "\u26a0\ufe0f Estouraria limite 5x (exigiria ~6 contas)"
+      },
+      {
+        "plano": "Claude Max 5x Oficial ($100/m\u00eas)",
+        "custo_periodo_usd": "$100.00",
+        "custo_periodo_brl": "R$ 575.00",
+        "custo_mensal_proj_usd": "$100.00",
+        "custo_mensal_proj_brl": "R$ 575.00",
+        "status": "\u26a0\ufe0f Quase no limite da janela semanal"
+      },
+      {
+        "plano": "Claude Max 20x Oficial ($200/m\u00eas)",
+        "custo_periodo_usd": "$200.00",
+        "custo_periodo_brl": "R$ 1.150.00",
+        "custo_mensal_proj_usd": "$200.00",
+        "custo_mensal_proj_brl": "R$ 1.150.00",
+        "status": "\u2139\ufe0f Cobriria o volume com margem"
+      },
+      {
+        "plano": "\ud83d\udc8e Arquitetura Antigravity + Mariana (Atual)",
+        "custo_periodo_usd": "$0.00",
+        "custo_periodo_brl": "R$ 0,00",
+        "custo_mensal_proj_usd": "$0.00",
+        "custo_mensal_proj_brl": "R$ 0,00",
+        "status": "\u2705 100% Gratuito (Economia Real R$ 11.683/m\u00eas)"
+      }
+    ]
+  },
+  "atualizado_em": "22/11/2026 13:25:49"
 }
