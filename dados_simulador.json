@@ -21,7 +21,7 @@
       "alavancagem": 20,
       "margem": 0.05,
       "entrada": 0.0003367,
-      "atual": 0.0003363,
+      "atual": 0.0003337,
       "roi_liq": 26.3,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
@@ -33,7 +33,7 @@
       "alavancagem": 20,
       "margem": 0.05,
       "entrada": 0.0003959,
-      "atual": 0.0003905,
+      "atual": 0.0003899,
       "roi_liq": 36.8,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
@@ -45,8 +45,8 @@
       "alavancagem": 20,
       "margem": 0.05,
       "entrada": 0.01153,
-      "atual": 0.01156,
-      "roi_liq": 17.5,
+      "atual": 0.01133,
+      "roi_liq": 33.9,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
       "liq_dist": "> 90%"
@@ -57,7 +57,7 @@
       "alavancagem": 50,
       "margem": 0.05,
       "entrada": 0.2093,
-      "atual": 0.2033,
+      "atual": 0.2026,
       "roi_liq": 36.6,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
@@ -69,7 +69,7 @@
       "alavancagem": 20,
       "margem": 0.05,
       "entrada": 16.15,
-      "atual": 16.16,
+      "atual": 16.09,
       "roi_liq": 17.0,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
@@ -81,7 +81,7 @@
       "alavancagem": 25,
       "margem": 0.05,
       "entrada": 13.794,
-      "atual": 13.705,
+      "atual": 13.682,
       "roi_liq": 24.6,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
@@ -93,8 +93,8 @@
       "alavancagem": 20,
       "margem": 0.05,
       "entrada": 0.017287,
-      "atual": 0.015095,
-      "roi_liq": 16.2,
+      "atual": 0.0144,
+      "roi_liq": 333.2,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
       "liq_dist": "> 90%"
@@ -105,8 +105,8 @@
       "alavancagem": 20,
       "margem": 0.05,
       "entrada": 0.9324,
-      "atual": 0.9923,
-      "roi_liq": 10.6,
+      "atual": 0.9724,
+      "roi_liq": 85.0,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
       "liq_dist": "> 90%"
@@ -117,8 +117,8 @@
       "alavancagem": 50,
       "margem": 0.05,
       "entrada": 3.8596,
-      "atual": 2.3318,
-      "roi_liq": 10.0,
+      "atual": 2.473,
+      "roi_liq": 1794.3,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
       "liq_dist": "> 90%"
@@ -168,14 +168,14 @@
       "motivo": "TRAILING STOP SURF EXECUTADO NO LUCRO",
       "pnl": "+0.045 USDT",
       "roi": "+105.9% L\u00edq",
-      "tempo": "14:25:31"
+      "tempo": "16:21:08"
     },
     {
       "par": "ETH",
       "motivo": "HEDGE FECHADO EM +13% ROI (Giro R\u00e1pido)",
       "pnl": "+0.007 USDT",
       "roi": "+13.2% L\u00edq",
-      "tempo": "14:25:31"
+      "tempo": "16:21:08"
     }
   ],
   "telemetria": {
@@ -290,5 +290,5 @@
       }
     ]
   },
-  "atualizado_em": "22/11/2026 14:25:31"
+  "atualizado_em": "22/11/2026 16:21:08"
 }
