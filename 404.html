@@ -157,6 +157,206 @@
             </div>
         </div>
 
+        
+        <!-- ========================================================================= -->
+        <!-- SEÇÃO: ARENA DE DUELO — TESTE A/B FORMAL (DOC 92 & PROTOCOLO CLAUDE)      -->
+        <!-- ========================================================================= -->
+        <div id="secao-arena-duelo" class="bg-brand-card border border-cyan-500/40 rounded-2xl p-4 shadow-xl space-y-3.5">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-[9px] font-black tracking-widest text-cyan-400 uppercase bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800">
+                        DOC 92 · DUELO DE ROBÔS & TESTE A/B
+                    </span>
+                    <h3 class="text-sm font-black text-white mt-1 flex items-center gap-1.5">
+                        <i data-lucide="swords" class="w-4 h-4 text-cyan-400"></i> Arena: Mariana vs Triple RSI
+                    </h3>
+                </div>
+                <span class="text-[10px] text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40">
+                    Ao Vivo MEXC
+                </span>
+            </div>
+
+            <p class="text-[11px] text-slate-300 leading-relaxed">
+                Backtest histórico e simulação paralela comparando a estratégia <strong>Mariana Shark SMC MTF</strong> contra o <strong>Triple RSI (7/14/21 do Danilo Leandro)</strong> nos 6 ativos (BTC, ETH, SOL, SUI, BNB, XAU) com taxas reais da MEXC (0.08%).
+            </p>
+
+            <!-- Cartões Teste A/B Lado a Lado (Protocolo Claude) -->
+            <div class="grid grid-cols-2 gap-2 text-xs">
+                <!-- Grupo A -->
+                <div class="bg-slate-900/90 border border-purple-500/50 rounded-xl p-3 space-y-1.5 relative overflow-hidden">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-bold text-purple-400">🅰️ GRUPO A (Controle)</span>
+                        <span class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-purple-950 border border-purple-500/40 text-purple-300">Nossa Base</span>
+                    </div>
+                    <div class="text-xs font-black text-white">Mariana Shark SMC</div>
+                    <div class="text-[10px] text-slate-400 space-y-0.5 pt-1">
+                        <div>Lucro: <strong class="text-emerald-400">+1.40%</strong></div>
+                        <div>Drawdown: <strong class="text-slate-200">4.00%</strong></div>
+                        <div>Trades: <strong class="text-cyan-400 font-mono">86</strong></div>
+                        <div>Expectância: <strong class="text-slate-200">+$0.016/op</strong></div>
+                    </div>
+                </div>
+
+                <!-- Grupo B -->
+                <div class="bg-slate-900/90 border border-amber-500/50 rounded-xl p-3 space-y-1.5 relative overflow-hidden">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-bold text-amber-400">🅱️ GRUPO B (Desafiante)</span>
+                        <span class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-amber-950 border border-amber-500/40 text-amber-300">Vídeo Profit</span>
+                    </div>
+                    <div class="text-xs font-black text-white">Triple RSI Invertido</div>
+                    <div class="text-[10px] text-slate-400 space-y-0.5 pt-1">
+                        <div>Lucro: <strong class="text-emerald-400">+2.40%</strong></div>
+                        <div>Drawdown: <strong class="text-slate-200">3.88%</strong></div>
+                        <div>Trades: <strong class="text-amber-400 font-mono">37</strong></div>
+                        <div>Expectância: <strong class="text-slate-200">+$0.065/op</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painel de Significância Estatística (Welch t-test) -->
+            <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-[11px] space-y-1.5">
+                <div class="flex items-center justify-between">
+                    <span class="text-slate-400 text-[10px] uppercase font-bold flex items-center gap-1">
+                        <i data-lucide="gauge" class="w-3.5 h-3.5 text-cyan-400"></i> Teste de Hipótese Estatística
+                    </span>
+                    <span class="text-[9px] px-2 py-0.5 rounded font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30">
+                        Amostra em Formação
+                    </span>
+                </div>
+                <div class="grid grid-cols-3 gap-1.5 text-center pt-1 font-mono text-[10px]">
+                    <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800/80">
+                        <span class="text-slate-400 text-[9px] block font-sans">p-valor</span>
+                        <strong class="text-slate-200">0.8689</strong>
+                    </div>
+                    <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800/80">
+                        <span class="text-slate-400 text-[9px] block font-sans">Confiança</span>
+                        <strong class="text-amber-400">13.11%</strong>
+                    </div>
+                    <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800/80">
+                        <span class="text-slate-400 text-[9px] block font-sans">Amostra B</span>
+                        <strong class="text-cyan-400">37 / 50 min</strong>
+                    </div>
+                </div>
+                <p class="text-[9.5px] text-slate-400 leading-relaxed pt-0.5">
+                    <strong>Protocolo Claude:</strong> p &gt; 0.05 indica que a diferença atual ainda não possui significância estatística definitiva em 800h históricas. A corrida ao vivo 24h irá gerar os 13 trades restantes para atingir a meta mínima de 50 operações.
+                </p>
+            </div>
+
+            <!-- Imagem do Gráfico Dark Mode das 4 Curvas de Capital -->
+            <div class="space-y-1.5 pt-1">
+                <span class="text-[10px] font-bold text-slate-400 block uppercase">Curvas de Capital: In-Sample (70%) vs Out-of-Sample (30%)</span>
+                <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950">
+                    <img src="GRAFICO_DUELO_ROBOS_MARIANA_VS_TRIPLE_RSI.png" alt="Curvas de Capital Arena Duelo" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção: Telemetria de Tokens & Cotas Mobile (Doc 104) -->
+        <div id="secao-telemetria" class="bg-brand-card border border-amber-500/30 rounded-2xl p-4 shadow-xl space-y-3.5">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center">
+                        <i data-lucide="cpu" class="w-4 h-4 text-amber-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-black uppercase tracking-wider text-white flex items-center gap-1.5">
+                            Telemetria &amp; Cotas <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">5H / 7D</span>
+                        </h3>
+                        <p class="text-[10px] text-slate-400">Economia Real de Tokens e Status de Cotas</p>
+                    </div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                    R$ 0,00 GASTO
+                </span>
+            </div>
+
+            <!-- Cards Resumo Telemetria -->
+            <div class="grid grid-cols-2 gap-2">
+                <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-2.5">
+                    <span class="text-[9px] text-slate-400 uppercase font-semibold block">Economia Real</span>
+                    <span class="text-sm font-black text-emerald-400 block" id="telemetria-eco-brl">R$ 335,51</span>
+                    <span class="text-[9px] text-slate-400">Projeção 30d: <b class="text-slate-300" id="telemetria-proj-brl">R$ 8.476/mês</b></span>
+                </div>
+                <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-2.5">
+                    <span class="text-[9px] text-slate-400 uppercase font-semibold block">Tokens Processados</span>
+                    <span class="text-sm font-black text-white block" id="telemetria-tokens-total">13.22M</span>
+                    <span class="text-[9px] text-cyan-400">Prompt Cache Hit: <b id="telemetria-cache-hit">79.5%</b></span>
+                </div>
+            </div>
+
+            <!-- Poupança Camada 0 -->
+            <div class="bg-slate-900/50 border border-slate-800/80 rounded-xl p-2.5 flex items-center justify-between text-[11px]">
+                <span class="text-slate-300 flex items-center gap-1.5">
+                    <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400"></i>
+                    Camada 0 Local (Scanner / FFmpeg):
+                </span>
+                <span class="font-bold text-emerald-400" id="telemetria-camada0-tokens">245M poupados fora de LLMs</span>
+            </div>
+
+            <!-- Barras de Janelas de Cotas 5h e 7 Dias -->
+            <div class="space-y-2 pt-1">
+                <span class="text-[10px] font-bold text-slate-400 block uppercase">Janelas Ativas &amp; Horários de Reset</span>
+
+                <!-- Antigravity / Claude -->
+                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-2.5 space-y-1.5">
+                    <div class="flex items-center justify-between text-[11px]">
+                        <span class="font-bold text-amber-300">🟠 Claude / Antigravity (Camada 2/3)</span>
+                        <span class="text-[10px] text-emerald-400 font-semibold" id="telemetria-claude-status">🟢 71.5% Livre</span>
+                    </div>
+                    <div class="space-y-1 text-[10px]">
+                        <div class="flex justify-between text-slate-400">
+                            <span>Janela 5h (18/50 reqs):</span>
+                            <span class="text-slate-300 font-semibold" id="telemetria-claude-5h">34% · Reset ~1h 08m</span>
+                        </div>
+                        <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-amber-400 h-full rounded-full" id="bar-claude-5h" style="width: 34%"></div>
+                        </div>
+                        <div class="flex justify-between text-slate-400 pt-0.5">
+                            <span>Cota Semanal 7 Dias:</span>
+                            <span class="text-slate-300 font-semibold" id="telemetria-claude-7d">28.5% · Reset Dom 23:59</span>
+                        </div>
+                        <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-emerald-400 h-full rounded-full" id="bar-claude-7d" style="width: 28.5%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Gemini Free -->
+                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-2.5 space-y-1.5">
+                    <div class="flex items-center justify-between text-[11px]">
+                        <span class="font-bold text-sky-400">🔵 Google Gemini Free (Camada 1)</span>
+                        <span class="text-[10px] text-emerald-400 font-semibold">100% Gratuito</span>
+                    </div>
+                    <div class="space-y-1 text-[10px]">
+                        <div class="flex justify-between text-slate-400">
+                            <span>Pool AI Studio 50 modelos:</span>
+                            <span class="text-slate-300 font-semibold" id="telemetria-gemini-uso">21.4% · Reset 21:00 BRT</span>
+                        </div>
+                        <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-sky-400 h-full rounded-full" id="bar-gemini" style="width: 21.4%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OpenRouter & DeepSeek -->
+                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-2.5 space-y-1.5">
+                    <div class="flex items-center justify-between text-[11px]">
+                        <span class="font-bold text-purple-400">🟣 OpenRouter :free &amp; DeepSeek</span>
+                        <span class="text-[10px] text-emerald-400 font-semibold">Standby Ativo</span>
+                    </div>
+                    <div class="space-y-1 text-[10px]">
+                        <div class="flex justify-between text-slate-400">
+                            <span>Fallback &amp; Mensagens Matinais:</span>
+                            <span class="text-slate-300 font-semibold" id="telemetria-deepseek-uso">14.8% · Reset 21:00 BRT</span>
+                        </div>
+                        <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-purple-400 h-full rounded-full" id="bar-deepseek" style="width: 14.8%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Seção: Histórico de Encerramentos no Lucro -->
         <div class="bg-brand-card border border-brand-border rounded-2xl p-4 shadow-lg space-y-2.5">
             <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
@@ -169,16 +369,24 @@
 
     </main>
 
-    <!-- Bottom Navigation Bar Mobile -->
-    <nav class="fixed bottom-0 left-0 right-0 z-50 glass-header border-t border-slate-800 px-6 py-2">
+    <!-- Bottom Navigation Bar Mobile (5 Abas Homologadas no Doc 104) -->
+    <nav class="fixed bottom-0 left-0 right-0 z-50 glass-header border-t border-slate-800 px-4 py-2">
         <div class="max-w-md mx-auto flex items-center justify-around text-[10px]">
             <a href="#" class="flex flex-col items-center gap-1 text-emerald-400 font-bold">
                 <i data-lucide="wallet" class="w-4 h-4"></i>
                 <span>Carteira</span>
             </a>
+            <a href="#secao-arena-duelo" class="flex flex-col items-center gap-1 text-cyan-400 hover:text-white transition">
+                <i data-lucide="swords" class="w-4 h-4"></i>
+                <span>Arena Duelo</span>
+            </a>
             <a href="#shark-mtf-container" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition">
                 <i data-lucide="radar" class="w-4 h-4"></i>
                 <span>Shark SMC</span>
+            </a>
+            <a href="#secao-telemetria" class="flex flex-col items-center gap-1 text-amber-400 hover:text-white transition font-semibold">
+                <i data-lucide="cpu" class="w-4 h-4"></i>
+                <span>Telemetria</span>
             </a>
             <a href="#historico-fechamentos" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition">
                 <i data-lucide="history" class="w-4 h-4"></i>
@@ -304,6 +512,32 @@
                 `;
                 containerHist.appendChild(item);
             });
+
+            // Renderizar Telemetria (Doc 104)
+            if (dados.telemetria) {
+                const tel = dados.telemetria;
+                if (tel.financeiro) {
+                    const elEco = document.getElementById('telemetria-eco-brl');
+                    if (elEco && tel.financeiro.economia_total_brl) elEco.textContent = `R$ ${tel.financeiro.economia_total_brl.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+                    const elProj = document.getElementById('telemetria-proj-brl');
+                    if (elProj && tel.financeiro.projecao_30_dias_bruto_brl) elProj.textContent = `R$ ${tel.financeiro.projecao_30_dias_bruto_brl.toLocaleString('pt-BR', {maximumFractionDigits: 0})}/mês`;
+                }
+                if (tel.totais) {
+                    const elTok = document.getElementById('telemetria-tokens-total');
+                    if (elTok) elTok.textContent = `${(tel.totais.total_geral_processado / 1e6).toFixed(2)}M`;
+                    const elCache = document.getElementById('telemetria-cache-hit');
+                    if (elCache) elCache.textContent = `${tel.totais.taxa_cache_hit_pct}%`;
+                    const elC0 = document.getElementById('telemetria-camada0-tokens');
+                    if (elC0) elC0.textContent = `${(tel.totais.tokens_poupados_camada0 / 1e6).toFixed(0)}M tokens poupados fora de LLMs`;
+                }
+                if (tel.janelas_cotas && tel.janelas_cotas.antigravity_claude) {
+                    const ag = tel.janelas_cotas.antigravity_claude;
+                    const elC5h = document.getElementById('telemetria-claude-5h');
+                    if (elC5h) elC5h.textContent = `${ag.janela_5h_uso_pct}% · Reset ${ag.janela_5h_reset}`;
+                    const elC7d = document.getElementById('telemetria-claude-7d');
+                    if (elC7d) elC7d.textContent = `${ag.janela_7d_uso_pct}% · Reset ${ag.janela_7d_reset}`;
+                }
+            }
 
             lucide.createIcons();
         }
