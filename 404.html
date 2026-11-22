@@ -135,6 +135,26 @@
                 </span>
             </div>
 
+            <!-- Cestas de Volatilidade (Doc 109: Storm / Tides / Winds / Waves) -->
+            <div id="bar-cestas-volatilidade" class="grid grid-cols-4 gap-1.5 text-[9px] text-center font-bold">
+                <div class="bg-sky-950/40 border border-sky-500/30 text-sky-300 rounded-lg py-1.5 px-1 shadow">
+                    <span class="block text-sky-400">⚡ Storm</span>
+                    <span id="cesta-cnt-storm" class="text-[10px] text-white">1</span>
+                </div>
+                <div class="bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 rounded-lg py-1.5 px-1 shadow">
+                    <span class="block text-emerald-400">🌊 Tides</span>
+                    <span id="cesta-cnt-tides" class="text-[10px] text-white">1</span>
+                </div>
+                <div class="bg-amber-950/40 border border-amber-500/30 text-amber-300 rounded-lg py-1.5 px-1 shadow">
+                    <span class="block text-amber-400">💨 Winds</span>
+                    <span id="cesta-cnt-winds" class="text-[10px] text-white">6</span>
+                </div>
+                <div class="bg-rose-950/40 border border-rose-500/30 text-rose-300 rounded-lg py-1.5 px-1 shadow">
+                    <span class="block text-rose-400">🏄 Waves</span>
+                    <span id="cesta-cnt-waves" class="text-[10px] text-white">2</span>
+                </div>
+            </div>
+
             <!-- Lista de Posições (Cards Mobile) -->
             <div id="lista-posicoes" class="space-y-2.5">
                 <!-- Inserido dinamicamente via JS -->
@@ -431,19 +451,32 @@
             document.getElementById('val-posicoes-qtd').innerHTML = `${dados.posicoes_abertas.length} / 10 <span class="text-[9px] font-normal text-emerald-400">(Cheia)</span>`;
             document.getElementById('count-posicoes').innerText = dados.posicoes_abertas.length;
 
+            // Atualizar contadores das 4 Cestas de Volatilidade (Doc 109)
+            if (dados.resumo_cestas) {
+                if (document.getElementById('cesta-cnt-storm')) document.getElementById('cesta-cnt-storm').innerText = dados.resumo_cestas.Storm || 0;
+                if (document.getElementById('cesta-cnt-tides')) document.getElementById('cesta-cnt-tides').innerText = dados.resumo_cestas.Tides || 0;
+                if (document.getElementById('cesta-cnt-winds')) document.getElementById('cesta-cnt-winds').innerText = dados.resumo_cestas.Winds || 0;
+                if (document.getElementById('cesta-cnt-waves')) document.getElementById('cesta-cnt-waves').innerText = dados.resumo_cestas.Waves || 0;
+            }
+
             // Renderizar Cards de Posições
             const containerPos = document.getElementById('lista-posicoes');
             containerPos.innerHTML = '';
             dados.posicoes_abertas.forEach(pos => {
                 const isLong = pos.lado === 'LONG';
                 const ladoBadge = isLong ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' : 'bg-rose-500/20 text-rose-400 border-rose-500/30';
+                const cCor = pos.cesta_cor || '#38bdf8';
+                const cLabel = pos.cesta_label || '⚡ Storm';
+                const thought = pos.thought_log || `Score 85 | Cesta ${pos.cesta || 'Storm'} | Trava Risk-Free +10% ROI`;
+                
                 const card = document.createElement('div');
                 card.className = "bg-brand-card border border-brand-border rounded-xl p-3.5 space-y-2 hover:border-slate-700 transition";
                 card.innerHTML = `
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
+                        <div class="flex items-center space-x-1.5 flex-wrap gap-y-1">
                             <span class="font-extrabold text-sm text-white">${pos.par}</span>
-                            <span class="text-[10px] font-bold px-1.5 py-0.2 rounded border ${ladoBadge}">${pos.lado} ${pos.alavancagem}X</span>
+                            <span class="text-[9px] font-bold px-1.5 py-0.5 rounded border ${ladoBadge}">${pos.lado} ${pos.alavancagem}X</span>
+                            <span class="text-[9px] font-bold px-1.5 py-0.5 rounded border" style="background:${cCor}18; color:${cCor}; border-color:${cCor}50;">${cLabel}</span>
                             <span class="text-[10px] text-slate-400">Margem: $${pos.margem.toFixed(2)}</span>
                         </div>
                         <div class="text-right">
@@ -451,7 +484,7 @@
                             <span class="text-[9px] text-slate-400 block">Líquido</span>
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-400 pt-1">
+                    <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-400 pt-0.5">
                         <div>Entrada: <span class="text-slate-200 font-semibold">$${pos.entrada}</span></div>
                         <div class="text-right">Atual MEXC: <span class="text-slate-200 font-semibold">$${pos.atual}</span></div>
                     </div>
@@ -463,6 +496,10 @@
                         <span class="text-emerald-400 font-bold bg-emerald-950/40 px-1.5 py-0.5 rounded border border-emerald-800/40">
                             Stop: +${pos.trava_roi.toFixed(0)}%
                         </span>
+                    </div>
+                    <!-- Thought Log em 1 Linha (Doc 109) -->
+                    <div class="bg-slate-950/90 rounded-lg p-2 border border-emerald-500/25 text-[10px] text-emerald-300 font-mono leading-relaxed">
+                        <span class="text-emerald-400 font-bold">💭 Thought:</span> ${thought}
                     </div>
                 `;
                 containerPos.appendChild(card);
@@ -499,16 +536,21 @@
             containerHist.innerHTML = '';
             dados.historico.forEach(h => {
                 const item = document.createElement('div');
-                item.className = "pt-2 flex items-center justify-between";
+                item.className = "pt-2 pb-2 space-y-1";
+                const cBadge = h.cesta_label ? `<span class="text-[9px] font-bold px-1.5 py-0.5 rounded border ml-1" style="background:${h.cesta_cor || '#38bdf8'}18; color:${h.cesta_cor || '#38bdf8'}; border-color:${h.cesta_cor || '#38bdf8'}50;">${h.cesta_label}</span>` : '';
+                const tHtml = h.thought_log ? `<div class="text-[10px] text-emerald-300 font-mono bg-slate-950/80 p-1.5 rounded border border-slate-800"><span class="text-emerald-400 font-bold">💭 Thought:</span> ${h.thought_log}</div>` : '';
                 item.innerHTML = `
-                    <div>
-                        <span class="font-bold text-white">${h.par}</span>
-                        <span class="text-[10px] text-slate-400 block">${h.motivo}</span>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="font-bold text-white">${h.par}</span>${cBadge}
+                            <span class="text-[10px] text-slate-400 block">${h.motivo}</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-emerald-400 font-bold block">${h.pnl}</span>
+                            <span class="text-[9px] text-slate-500">${h.roi} · ${h.tempo}</span>
+                        </div>
                     </div>
-                    <div class="text-right">
-                        <span class="text-emerald-400 font-bold block">${h.pnl}</span>
-                        <span class="text-[9px] text-slate-500">${h.roi} · ${h.tempo}</span>
-                    </div>
+                    ${tHtml}
                 `;
                 containerHist.appendChild(item);
             });
