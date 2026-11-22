@@ -13,7 +13,11 @@
       "roi_liq": 10.0,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
-      "liq_dist": "> 90%"
+      "liq_dist": "> 90%",
+      "cesta": "Storm",
+      "cesta_label": "\u26a1 Storm (\u00c2ncora)",
+      "cesta_cor": "#38bdf8",
+      "thought_log": "Score 82 | Cesta Storm | Rejei\u00e7\u00e3o Resist\u00eancia 41.28 + FVG 1h | Micro-margem $0.05 Cross | Trava Risk-Free +10.0%"
     },
     {
       "par": "HOT",
@@ -21,11 +25,15 @@
       "alavancagem": 20,
       "margem": 0.05,
       "entrada": 0.0003367,
-      "atual": 0.0003337,
+      "atual": 0.0003283,
       "roi_liq": 26.3,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
-      "liq_dist": "> 90%"
+      "liq_dist": "> 90%",
+      "cesta": "Winds",
+      "cesta_label": "\ud83d\udca8 Winds (Tend\u00eancia)",
+      "cesta_cor": "#fbbf24",
+      "thought_log": "Score 88 | Cesta Winds | Sweep M\u00ednima 5m + Div RSI 15m | Micro-margem $0.05 Cross | Trava Risk-Free +10.0% (Pico +26.3%)"
     },
     {
       "par": "PYBOBO",
@@ -33,11 +41,15 @@
       "alavancagem": 20,
       "margem": 0.05,
       "entrada": 0.0003959,
-      "atual": 0.0003899,
-      "roi_liq": 36.8,
+      "atual": 0.0003859,
+      "roi_liq": 49.7,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
-      "liq_dist": "> 90%"
+      "liq_dist": "> 90%",
+      "cesta": "Waves",
+      "cesta_label": "\ud83c\udfc4 Waves (Alta Vol)",
+      "cesta_cor": "#f43f5e",
+      "thought_log": "Score 91 | Cesta Waves | Exaust\u00e3o Volume + Pullback EMA 21 | Micro-margem $0.05 Cross | Trava Risk-Free +10.0% (Pico +36.8%)"
     },
     {
       "par": "SPORTFUN",
@@ -45,11 +57,15 @@
       "alavancagem": 20,
       "margem": 0.05,
       "entrada": 0.01153,
-      "atual": 0.01133,
-      "roi_liq": 33.9,
+      "atual": 0.01136,
+      "roi_liq": 28.7,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
-      "liq_dist": "> 90%"
+      "liq_dist": "> 90%",
+      "cesta": "Winds",
+      "cesta_label": "\ud83d\udca8 Winds (Tend\u00eancia)",
+      "cesta_cor": "#fbbf24",
+      "thought_log": "Score 84 | Cesta Winds | CHoCH Baixa 15m + Order Block 1h | Micro-margem $0.05 Cross | Trava Risk-Free +10.0%"
     },
     {
       "par": "CYBER",
@@ -57,11 +73,15 @@
       "alavancagem": 50,
       "margem": 0.05,
       "entrada": 0.2093,
-      "atual": 0.2026,
+      "atual": 0.2,
       "roi_liq": 36.6,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
-      "liq_dist": "> 90%"
+      "liq_dist": "> 90%",
+      "cesta": "Winds",
+      "cesta_label": "\ud83d\udca8 Winds (Tend\u00eancia)",
+      "cesta_cor": "#fbbf24",
+      "thought_log": "Score 79 | Cesta Winds | Fundo Duplo 15m + Volume Absor\u00e7\u00e3o | Micro-margem $0.05 Cross | Trava Risk-Free +10.0%"
     },
     {
       "par": "BITO",
@@ -69,11 +89,15 @@
       "alavancagem": 20,
       "margem": 0.05,
       "entrada": 16.15,
-      "atual": 16.09,
+      "atual": 16.18,
       "roi_liq": 17.0,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
-      "liq_dist": "> 90%"
+      "liq_dist": "> 90%",
+      "cesta": "Tides",
+      "cesta_label": "\ud83c\udf0a Tides (N\u00facleo)",
+      "cesta_cor": "#34d399",
+      "thought_log": "Score 86 | Cesta Tides | ETF Momentum + EMA 9/21 Up | Micro-margem $0.05 Cross | Trava Risk-Free +10.0% (Pico +17.0%)"
     },
     {
       "par": "SKDD",
@@ -81,11 +105,15 @@
       "alavancagem": 25,
       "margem": 0.05,
       "entrada": 13.794,
-      "atual": 13.682,
+      "atual": 13.71,
       "roi_liq": 24.6,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
-      "liq_dist": "> 90%"
+      "liq_dist": "> 90%",
+      "cesta": "Winds",
+      "cesta_label": "\ud83d\udca8 Winds (Tend\u00eancia)",
+      "cesta_cor": "#fbbf24",
+      "thought_log": "Score 87 | Cesta Winds | Quebra BOS 15m + Volume Cl\u00edmax | Micro-margem $0.05 Cross | Trava Risk-Free +10.0% (Pico +24.6%)"
     },
     {
       "par": "IDOL",
@@ -93,11 +121,15 @@
       "alavancagem": 20,
       "margem": 0.05,
       "entrada": 0.017287,
-      "atual": 0.0144,
-      "roi_liq": 333.2,
+      "atual": 0.01529,
+      "roi_liq": 230.2,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
-      "liq_dist": "> 90%"
+      "liq_dist": "> 90%",
+      "cesta": "Waves",
+      "cesta_label": "\ud83c\udfc4 Waves (Alta Vol)",
+      "cesta_cor": "#f43f5e",
+      "thought_log": "Score 83 | Cesta Waves | Topo Duplo 15m + Rejei\u00e7\u00e3o RSI | Micro-margem $0.05 Cross | Trava Risk-Free +10.0% (Pico +16.2%)"
     },
     {
       "par": "DGAI",
@@ -105,11 +137,15 @@
       "alavancagem": 20,
       "margem": 0.05,
       "entrada": 0.9324,
-      "atual": 0.9724,
-      "roi_liq": 85.0,
+      "atual": 0.9941,
+      "roi_liq": 131.5,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
-      "liq_dist": "> 90%"
+      "liq_dist": "> 90%",
+      "cesta": "Winds",
+      "cesta_label": "\ud83d\udca8 Winds (Tend\u00eancia)",
+      "cesta_cor": "#fbbf24",
+      "thought_log": "Score 85 | Cesta Winds | FVG Compra 15m + Reteste Suporte | Micro-margem $0.05 Cross | Trava Risk-Free +10.0% (Pico +10.6%)"
     },
     {
       "par": "EVAA",
@@ -117,13 +153,23 @@
       "alavancagem": 50,
       "margem": 0.05,
       "entrada": 3.8596,
-      "atual": 2.473,
-      "roi_liq": 1794.3,
+      "atual": 2.3564,
+      "roi_liq": 1945.4,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
-      "liq_dist": "> 90%"
+      "liq_dist": "> 90%",
+      "cesta": "Winds",
+      "cesta_label": "\ud83d\udca8 Winds (Tend\u00eancia)",
+      "cesta_cor": "#fbbf24",
+      "thought_log": "Score 89 | Cesta Winds | Sweep Topo + Div MACD 1h | Micro-margem $0.05 Cross | Trava Risk-Free +10.0% (Pico +10.0%)"
     }
   ],
+  "resumo_cestas": {
+    "Storm": 1,
+    "Tides": 1,
+    "Winds": 6,
+    "Waves": 2
+  },
   "shark_mtf": [
     {
       "par": "BTC/USDT",
@@ -168,14 +214,22 @@
       "motivo": "TRAILING STOP SURF EXECUTADO NO LUCRO",
       "pnl": "+0.045 USDT",
       "roi": "+105.9% L\u00edq",
-      "tempo": "16:21:08"
+      "cesta": "Storm",
+      "cesta_label": "\u26a1 Storm (\u00c2ncora)",
+      "cesta_cor": "#38bdf8",
+      "thought_log": "Score 94 | Rompimento Sweep 5m + Trailing Surf em Escada realizou ganho no alvo m\u00f3vel (+105.9% L\u00edq)",
+      "tempo": "20:24:46"
     },
     {
       "par": "ETH",
       "motivo": "HEDGE FECHADO EM +13% ROI (Giro R\u00e1pido)",
       "pnl": "+0.007 USDT",
       "roi": "+13.2% L\u00edq",
-      "tempo": "16:21:08"
+      "cesta": "Storm",
+      "cesta_label": "\u26a1 Storm (\u00c2ncora)",
+      "cesta_cor": "#38bdf8",
+      "thought_log": "Score 89 | Pullback EMA 21 15m garantiu sa\u00edda no lucro com risco zero ao tocar +13.2% ROI",
+      "tempo": "20:24:46"
     }
   ],
   "telemetria": {
@@ -290,5 +344,5 @@
       }
     ]
   },
-  "atualizado_em": "22/11/2026 16:21:08"
+  "atualizado_em": "22/11/2026 20:24:46"
 }
