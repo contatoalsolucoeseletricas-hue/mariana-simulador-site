@@ -1,7 +1,7 @@
 {
   "banca": 101.05,
   "pnl_total": 0.49,
-  "margin_ratio": 5.39,
+  "margin_ratio": 5.49,
   "posicoes_abertas": [
     {
       "par": "XAG",
@@ -46,7 +46,7 @@
       "margem": 0.05,
       "entrada": 0.01153,
       "atual": 0.01155306,
-      "roi_liq": 8.8,
+      "roi_liq": 17.5,
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
       "liq_dist": "> 90%"
@@ -98,6 +98,30 @@
       "trava_roi": 10.0,
       "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
       "liq_dist": "> 90%"
+    },
+    {
+      "par": "DGAI",
+      "lado": "LONG",
+      "alavancagem": 20,
+      "margem": 0.05,
+      "entrada": 0.9324,
+      "atual": 0.9342648,
+      "roi_liq": 10.6,
+      "trava_roi": 10.0,
+      "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
+      "liq_dist": "> 90%"
+    },
+    {
+      "par": "EVAA",
+      "lado": "SHORT",
+      "alavancagem": 50,
+      "margem": 0.05,
+      "entrada": 3.8596,
+      "atual": 3.8673192,
+      "roi_liq": 10.0,
+      "trava_roi": 10.0,
+      "status": "Surf Ativo: +10% ROI Travado (Risco Zero)",
+      "liq_dist": "> 90%"
     }
   ],
   "shark_mtf": [
@@ -144,15 +168,15 @@
       "motivo": "TRAILING STOP SURF EXECUTADO NO LUCRO",
       "pnl": "+0.045 USDT",
       "roi": "+105.9% L\u00edq",
-      "tempo": "09:24:40"
+      "tempo": "09:28:13"
     },
     {
       "par": "ETH",
       "motivo": "HEDGE FECHADO EM +13% ROI (Giro R\u00e1pido)",
       "pnl": "+0.007 USDT",
       "roi": "+13.2% L\u00edq",
-      "tempo": "09:24:40"
+      "tempo": "09:28:13"
     }
   ],
-  "atualizado_em": "22/11/2026 09:24:40"
+  "atualizado_em": "22/11/2026 09:28:13"
 }
