@@ -157,6 +157,100 @@
             </div>
         </div>
 
+        
+        <!-- ========================================================================= -->
+        <!-- SEÇÃO: ARENA DE DUELO — TESTE A/B FORMAL (DOC 92 & PROTOCOLO CLAUDE)      -->
+        <!-- ========================================================================= -->
+        <div id="secao-arena-duelo" class="bg-brand-card border border-cyan-500/40 rounded-2xl p-4 shadow-xl space-y-3.5">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-[9px] font-black tracking-widest text-cyan-400 uppercase bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800">
+                        DOC 92 · DUELO DE ROBÔS & TESTE A/B
+                    </span>
+                    <h3 class="text-sm font-black text-white mt-1 flex items-center gap-1.5">
+                        <i data-lucide="swords" class="w-4 h-4 text-cyan-400"></i> Arena: Mariana vs Triple RSI
+                    </h3>
+                </div>
+                <span class="text-[10px] text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40">
+                    Ao Vivo MEXC
+                </span>
+            </div>
+
+            <p class="text-[11px] text-slate-300 leading-relaxed">
+                Backtest histórico e simulação paralela comparando a estratégia <strong>Mariana Shark SMC MTF</strong> contra o <strong>Triple RSI (7/14/21 do Danilo Leandro)</strong> nos 6 ativos (BTC, ETH, SOL, SUI, BNB, XAU) com taxas reais da MEXC (0.08%).
+            </p>
+
+            <!-- Cartões Teste A/B Lado a Lado (Protocolo Claude) -->
+            <div class="grid grid-cols-2 gap-2 text-xs">
+                <!-- Grupo A -->
+                <div class="bg-slate-900/90 border border-purple-500/50 rounded-xl p-3 space-y-1.5 relative overflow-hidden">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-bold text-purple-400">🅰️ GRUPO A (Controle)</span>
+                        <span class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-purple-950 border border-purple-500/40 text-purple-300">Nossa Base</span>
+                    </div>
+                    <div class="text-xs font-black text-white">Mariana Shark SMC</div>
+                    <div class="text-[10px] text-slate-400 space-y-0.5 pt-1">
+                        <div>Lucro: <strong class="text-emerald-400">+1.40%</strong></div>
+                        <div>Drawdown: <strong class="text-slate-200">4.00%</strong></div>
+                        <div>Trades: <strong class="text-cyan-400 font-mono">86</strong></div>
+                        <div>Expectância: <strong class="text-slate-200">+$0.016/op</strong></div>
+                    </div>
+                </div>
+
+                <!-- Grupo B -->
+                <div class="bg-slate-900/90 border border-amber-500/50 rounded-xl p-3 space-y-1.5 relative overflow-hidden">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-bold text-amber-400">🅱️ GRUPO B (Desafiante)</span>
+                        <span class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-amber-950 border border-amber-500/40 text-amber-300">Vídeo Profit</span>
+                    </div>
+                    <div class="text-xs font-black text-white">Triple RSI Invertido</div>
+                    <div class="text-[10px] text-slate-400 space-y-0.5 pt-1">
+                        <div>Lucro: <strong class="text-emerald-400">+2.40%</strong></div>
+                        <div>Drawdown: <strong class="text-slate-200">3.88%</strong></div>
+                        <div>Trades: <strong class="text-amber-400 font-mono">37</strong></div>
+                        <div>Expectância: <strong class="text-slate-200">+$0.065/op</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painel de Significância Estatística (Welch t-test) -->
+            <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800 text-[11px] space-y-1.5">
+                <div class="flex items-center justify-between">
+                    <span class="text-slate-400 text-[10px] uppercase font-bold flex items-center gap-1">
+                        <i data-lucide="gauge" class="w-3.5 h-3.5 text-cyan-400"></i> Teste de Hipótese Estatística
+                    </span>
+                    <span class="text-[9px] px-2 py-0.5 rounded font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30">
+                        Amostra em Formação
+                    </span>
+                </div>
+                <div class="grid grid-cols-3 gap-1.5 text-center pt-1 font-mono text-[10px]">
+                    <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800/80">
+                        <span class="text-slate-400 text-[9px] block font-sans">p-valor</span>
+                        <strong class="text-slate-200">0.8689</strong>
+                    </div>
+                    <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800/80">
+                        <span class="text-slate-400 text-[9px] block font-sans">Confiança</span>
+                        <strong class="text-amber-400">13.11%</strong>
+                    </div>
+                    <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800/80">
+                        <span class="text-slate-400 text-[9px] block font-sans">Amostra B</span>
+                        <strong class="text-cyan-400">37 / 50 min</strong>
+                    </div>
+                </div>
+                <p class="text-[9.5px] text-slate-400 leading-relaxed pt-0.5">
+                    <strong>Protocolo Claude:</strong> p &gt; 0.05 indica que a diferença atual ainda não possui significância estatística definitiva em 800h históricas. A corrida ao vivo 24h irá gerar os 13 trades restantes para atingir a meta mínima de 50 operações.
+                </p>
+            </div>
+
+            <!-- Imagem do Gráfico Dark Mode das 4 Curvas de Capital -->
+            <div class="space-y-1.5 pt-1">
+                <span class="text-[10px] font-bold text-slate-400 block uppercase">Curvas de Capital: In-Sample (70%) vs Out-of-Sample (30%)</span>
+                <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950">
+                    <img src="GRAFICO_DUELO_ROBOS_MARIANA_VS_TRIPLE_RSI.png" alt="Curvas de Capital Arena Duelo" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+
         <!-- Seção: Histórico de Encerramentos no Lucro -->
         <div class="bg-brand-card border border-brand-border rounded-2xl p-4 shadow-lg space-y-2.5">
             <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
@@ -175,6 +269,10 @@
             <a href="#" class="flex flex-col items-center gap-1 text-emerald-400 font-bold">
                 <i data-lucide="wallet" class="w-4 h-4"></i>
                 <span>Carteira</span>
+            </a>
+            <a href="#secao-arena-duelo" class="flex flex-col items-center gap-1 text-cyan-400 hover:text-white transition">
+                <i data-lucide="swords" class="w-4 h-4"></i>
+                <span>Arena Duelo</span>
             </a>
             <a href="#shark-mtf-container" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition">
                 <i data-lucide="radar" class="w-4 h-4"></i>
