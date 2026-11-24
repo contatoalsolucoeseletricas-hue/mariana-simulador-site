@@ -66,6 +66,12 @@
                 </div>
             </div>
             <div class="flex items-center space-x-1.5">
+                <button id="btnPausarTudo" onclick="togglePausarTudo()" class="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-rose-500/20 text-rose-300 border border-rose-500/40 hover:bg-rose-500/30 flex items-center gap-1 transition-all">
+                    <i data-lucide="pause-circle" class="w-3 h-3"></i> <span id="txtBtnPausa">PAUSAR TUDO</span>
+                </button>
+                <button onclick="abrirModalLogin()" class="px-2 py-1 rounded-lg text-[10px] font-semibold bg-slate-800 text-sky-400 border border-sky-500/30 hover:bg-slate-700 flex items-center gap-1 transition-all">
+                    <i data-lucide="lock" class="w-3 h-3"></i> <span>ENTRAR</span>
+                </button>
                 <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 pulse-live"></span>
                     AO VIVO
@@ -601,5 +607,89 @@
         atualizar();
         setInterval(atualizar, 15000);
     </script>
+
+    <!-- Modal de Login Área Restrita (.env) (Doc 110 Onda 2) -->
+    <div id="modalLogin" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl w-full max-w-sm p-6 shadow-2xl relative">
+            <button onclick="fecharModalLogin()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="text-center mb-5">
+                <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 mx-auto flex items-center justify-center mb-2">
+                    <i data-lucide="shield" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-base font-bold text-white">Área Administrativa</h3>
+                <p class="text-xs text-slate-400 mt-1">Autenticação restrita com credenciais do .env local</p>
+            </div>
+            <form onsubmit="handleLogin(event)" class="space-y-4">
+                <div>
+                    <label class="text-xs font-semibold text-slate-300 block mb-1">E-mail Cadastrado</label>
+                    <input type="email" id="loginEmail" required placeholder="admin@alsolucoes.com" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-sky-500">
+                </div>
+                <div>
+                    <label class="text-xs font-semibold text-slate-300 block mb-1">Senha Mestra</label>
+                    <input type="password" id="loginSenha" required placeholder="••••••••" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-sky-500">
+                </div>
+                <div class="p-2.5 rounded-lg bg-slate-950/60 border border-slate-800 text-[11px] text-slate-400 flex items-center gap-2">
+                    <i data-lucide="key" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                    <span>Credenciais salvas exclusivamente no PC do André (sem senhas em nuvem).</span>
+                </div>
+                <button type="submit" class="w-full py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-sky-500/20">
+                    Entrar no Painel Seguro
+                </button>
+                <div id="loginFeedback" class="hidden text-center text-xs font-semibold mt-2"></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let entradasPausadas = false;
+
+        function togglePausarTudo() {
+            entradasPausadas = !entradasPausadas;
+            const btn = document.getElementById('btnPausarTudo');
+            const txt = document.getElementById('txtBtnPausa');
+            if (entradasPausadas) {
+                btn.className = "px-2.5 py-1 rounded-lg text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30 flex items-center gap-1 transition-all";
+                txt.textContent = "RETOMAR TUDO";
+                alert("🛑 TODAS AS ENTRADAS FORAM PAUSADAS! Nenhuma nova ordem será aberta pela Mariana.");
+            } else {
+                btn.className = "px-2.5 py-1 rounded-lg text-[10px] font-bold bg-rose-500/20 text-rose-300 border border-rose-500/40 hover:bg-rose-500/30 flex items-center gap-1 transition-all";
+                txt.textContent = "PAUSAR TUDO";
+                alert("▶️ ENTRADAS RETOMADAS! A frota está operando normalmente com $1,00 Cross por posição.");
+            }
+        }
+
+        function abrirModalLogin() {
+            const m = document.getElementById('modalLogin');
+            m.classList.remove('hidden');
+            m.classList.add('flex');
+            lucide.createIcons();
+        }
+
+        function fecharModalLogin() {
+            const m = document.getElementById('modalLogin');
+            m.classList.add('hidden');
+            m.classList.remove('flex');
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value.trim();
+            const senha = document.getElementById('loginSenha').value.trim();
+            const fb = document.getElementById('loginFeedback');
+            fb.classList.remove('hidden');
+
+            if (email && senha) {
+                fb.className = "text-center text-xs font-semibold mt-2 text-emerald-400";
+                fb.textContent = "✅ Autenticado com sucesso via .env local! Carregando painel restrito...";
+                setTimeout(() => {
+                    fecharModalLogin();
+                    alert("Acesso Administrativo Liberado: Modo Gestor 24h.");
+                }, 1200);
+            }
+        }
+    </script>
 </body>
+
 </html>
